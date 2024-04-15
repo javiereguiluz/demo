@@ -1,8 +1,3 @@
-@import "variables";
-
-@import "../../vendor/twbs/bootstrap/scss/bootstrap.scss";
-@import "./bootswatch/bootswatch";
-
 :root {
   --font-heading: 2.5rem;
   --font-title: 2rem;
