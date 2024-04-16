@@ -33,7 +33,7 @@
                         <a class="navbar-brand" href="{{ path('homepage') }}">
                             Symfony Demo
                         </a>
-                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#appNavbar" aria-controls="appNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#appNavbar" aria-controls="appNavbar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
 
@@ -60,7 +60,7 @@
 
                                 {% if app.user %}
                                     <li class="nav-item dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="user">
+                                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="user">
                                             <i class="fa fa-user" aria-hidden="true"></i>
                                             <span class="caret"></span>
                                             <span class="sr-only">{{ app.user.fullname }}</span>

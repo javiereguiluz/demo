@@ -79,9 +79,6 @@ return [
         'version' => '6.5.1',
         'type' => 'css',
     ],
-    'popper.js' => [
-        'version' => '1.16.1',
-    ],
     'typeahead.js' => [
         'version' => '0.11.1',
     ],
@@ -112,5 +109,8 @@ return [
     ],
     '@symfony/ux-live-component' => [
         'path' => './vendor/symfony/ux-live-component/assets/dist/live_controller.js',
+    ],
+    '@popperjs/core' => [
+        'version' => '2.11.8',
     ],
 ];

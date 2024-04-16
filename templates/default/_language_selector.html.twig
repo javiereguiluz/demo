@@ -1,5 +1,5 @@
 {% macro render_language_selector(display_current_language = false) %}
-    <a href="#" class="nav-link dropdown-toggle language-selector-dropdown-button" data-toggle="modal" data-target="#locale-selector-modal" role="button" id="locales">
+    <a href="#" class="nav-link dropdown-toggle language-selector-dropdown-button" data-bs-toggle="modal" data-bs-target="#locale-selector-modal" role="button" id="locales">
         <i class="fa fa-solid fa-globe" aria-hidden="true"></i>
         {% if display_current_language %}
             <span class="current-language">{{ app.request.locale|locale_name }}</span>
@@ -16,7 +16,7 @@
                         {# display this title always in English to make the language selector easier to use #}
                         Choose your language
                     </p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
