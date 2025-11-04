@@ -1,5 +1,5 @@
 const nameCheck = /^[-_a-zA-Z0-9]{4,22}$/;
-const tokenCheck = /^[-_/+a-zA-Z0-9]{24,}$/;
+const tokenCheck = /^[-_\/+a-zA-Z0-9]{24,}$/;
 
 // Generate and double-submit a CSRF token in a form field and a cookie, as defined by Symfony's SameOriginCsrfTokenManager
 // Use `form.requestSubmit()` to ensure that the submit event is triggered. Using `form.submit()` will not trigger the event
