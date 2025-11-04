@@ -81,6 +81,7 @@
         },
         "files": [
             ".env.test",
+            "bin/phpunit",
             "phpunit.dist.xml",
             "tests/bootstrap.php",
             "bin/phpunit"
