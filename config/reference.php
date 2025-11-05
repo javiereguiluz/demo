@@ -474,7 +474,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         max_host_connections?: int, // The maximum number of connections to a single host.
  *         default_options?: array{
  *             headers?: array<string, mixed>,
- *             vars?: list<mixed>,
+ *             vars?: array<string, mixed>,
  *             max_redirects?: int, // The maximum number of redirects to follow.
  *             http_version?: scalar|null, // The default HTTP version, typically 1.1 or 2.0, leave to null for the best version.
  *             resolve?: array<string, scalar|null>,
@@ -497,7 +497,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *                 md5?: mixed,
  *             },
  *             crypto_method?: scalar|null, // The minimum version of TLS to accept; must be one of STREAM_CRYPTO_METHOD_TLSv*_CLIENT constants.
- *             extra?: list<mixed>,
+ *             extra?: array<string, mixed>,
  *             rate_limiter?: scalar|null, // Rate limiter name to use for throttling requests. // Default: null
  *             caching?: bool|array{ // Caching configuration.
  *                 enabled?: bool, // Default: false
@@ -550,7 +550,7 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *                 md5?: mixed,
  *             },
  *             crypto_method?: scalar|null, // The minimum version of TLS to accept; must be one of STREAM_CRYPTO_METHOD_TLSv*_CLIENT constants.
- *             extra?: list<mixed>,
+ *             extra?: array<string, mixed>,
  *             rate_limiter?: scalar|null, // Rate limiter name to use for throttling requests. // Default: null
  *             caching?: bool|array{ // Caching configuration.
  *                 enabled?: bool, // Default: false
@@ -1444,6 +1444,12 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *     intercept_redirects?: bool, // Default: false
  *     excluded_ajax_paths?: scalar|null, // Default: "^/((index|app(_[\\w]+)?)\\.php/)?_wdt"
  * }
+ * @psalm-type DamaDoctrineTestConfig = array{
+ *     enable_static_connection?: mixed, // Default: true
+ *     enable_static_meta_data_cache?: bool, // Default: true
+ *     enable_static_query_cache?: bool, // Default: true
+ *     connection_keys?: list<mixed>,
+ * }
  * @psalm-type DoctrineMigrationsConfig = array{
  *     enable_service_migrations?: bool, // Whether to enable fetching migrations from the service container. // Default: false
  *     migrations_paths?: array<string, scalar|null>,
@@ -1526,7 +1532,10 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  *         name_prefix?: scalar|null, // Default: ""
  *     }>,
  *     anonymous_template_directory?: scalar|null, // Defaults to `components`
- *     profiler?: bool, // Enables the profiler for Twig Component (in debug mode) // Default: "%kernel.debug%"
+ *     profiler?: bool|array{ // Enables the profiler for Twig Component
+ *         enabled?: bool, // Default: "%kernel.debug%"
+ *         collect_components?: bool, // Collect components instances // Default: true
+ *     },
  *     controllers_json?: scalar|null, // Deprecated: The "twig_component.controllers_json" config option is deprecated, and will be removed in 3.0. // Default: null
  * }
  * @psalm-type LiveComponentConfig = array{
@@ -1556,25 +1565,19 @@ namespace Symfony\Component\DependencyInjection\Loader\Configurator;
  * }
  * @psalm-type UxIconsConfig = array{
  *     icon_dir?: scalar|null, // The local directory where icons are stored. // Default: "%kernel.project_dir%/assets/icons"
- *     default_icon_attributes?: mixed, // Default attributes to add to all icons. // Default: {"fill":"currentColor"}
+ *     default_icon_attributes?: array<string, scalar|null>,
  *     icon_sets?: array<string, array{ // the icon set prefix (e.g. "acme") // Default: []
  *         path?: scalar|null, // The local icon set directory path. (cannot be used with 'alias')
  *         alias?: scalar|null, // The remote icon set identifier. (cannot be used with 'path')
- *         icon_attributes?: list<mixed>,
+ *         icon_attributes?: array<string, scalar|null>,
  *     }>,
- *     aliases?: list<scalar|null>,
+ *     aliases?: array<string, string>,
  *     iconify?: bool|array{ // Configuration for the remote icon service.
  *         enabled?: bool, // Default: true
  *         on_demand?: bool, // Whether to download icons "on demand". // Default: true
  *         endpoint?: scalar|null, // The endpoint for the Iconify icons API. // Default: "https://api.iconify.design"
  *     },
  *     ignore_not_found?: bool, // Ignore error when an icon is not found. Set to 'true' to fail silently. // Default: false
- * }
- * @psalm-type DamaDoctrineTestConfig = array{
- *     enable_static_connection?: mixed, // Default: true
- *     enable_static_meta_data_cache?: bool, // Default: true
- *     enable_static_query_cache?: bool, // Default: true
- *     connection_keys?: list<mixed>,
  * }
  * @psalm-type ConfigType = array{
  *     imports?: ImportsConfig,
