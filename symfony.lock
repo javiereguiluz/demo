@@ -369,7 +369,17 @@
         ]
     },
     "symfonycasts/sass-bundle": {
-        "version": "v0.7.0"
+        "version": "0.9",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "0.5",
+            "ref": "4fe7a892a9f6f052c64ca2d6ee600cf95716f974"
+        },
+        "files": [
+            "assets/styles/app.scss",
+            "config/packages/symfonycasts_sass.yaml"
+        ]
     },
     "twig/extra-bundle": {
         "version": "v3.20.0"
