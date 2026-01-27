@@ -56,7 +56,7 @@ class PostRepository extends ServiceEntityRepository
                 ->setParameter('tag', $tag);
         }
 
-        return (new Paginator($qb))->paginate($page);
+        return new Paginator($qb)->paginate($page);
     }
 
     /**
