@@ -18,14 +18,14 @@ $fileHeaderComment = <<<COMMENT
     file that was distributed with this source code.
     COMMENT;
 
-return (new PhpCsFixer\Config())
+return new PhpCsFixer\Config()
     ->setFinder(
         PhpCsFixer\Finder::create()->in(['src', 'tests'])->append([__FILE__])
     )
     ->setRiskyAllowed(true)
     ->setRules([
-        '@PHP8x2Migration' => true,
-        '@PHP8x2Migration:risky' => true,
+        '@PHP8x4Migration' => true,
+        '@PHP8x4Migration:risky' => true,
         '@Symfony' => true,
         '@Symfony:risky' => true,
         'declare_strict_types' => false, // depends how project wants to handle type matching and untaint user input
