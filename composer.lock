@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c27c4815f3cea9d4fedd80e19225f42f",
+    "content-hash": "bde4e006a6a2a333229036de28fcf8b7",
     "packages": [
         {
             "name": "composer/semver",
@@ -1030,16 +1030,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "3.6.1",
+            "version": "3.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "2148940290e4c44b9101095707e71fb590832fa5"
+                "reference": "4262eb495b4d2a53b45de1ac58881e0091f2970f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/2148940290e4c44b9101095707e71fb590832fa5",
-                "reference": "2148940290e4c44b9101095707e71fb590832fa5",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/4262eb495b4d2a53b45de1ac58881e0091f2970f",
+                "reference": "4262eb495b4d2a53b45de1ac58881e0091f2970f",
                 "shasum": ""
             },
             "require": {
@@ -1112,9 +1112,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/3.6.1"
+                "source": "https://github.com/doctrine/orm/tree/3.6.2"
             },
-            "time": "2026-01-09T05:28:15+00:00"
+            "time": "2026-01-30T21:41:41+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -7689,16 +7689,16 @@
         },
         {
             "name": "symfonycasts/sass-bundle",
-            "version": "v0.8.3",
+            "version": "v0.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SymfonyCasts/sass-bundle.git",
-                "reference": "c6c4958f932cab8b74f2a95a87eaca5d58fb98d6"
+                "reference": "3472f2018417b4f7258095089b327a7ba79018ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SymfonyCasts/sass-bundle/zipball/c6c4958f932cab8b74f2a95a87eaca5d58fb98d6",
-                "reference": "c6c4958f932cab8b74f2a95a87eaca5d58fb98d6",
+                "url": "https://api.github.com/repos/SymfonyCasts/sass-bundle/zipball/3472f2018417b4f7258095089b327a7ba79018ad",
+                "reference": "3472f2018417b4f7258095089b327a7ba79018ad",
                 "shasum": ""
             },
             "require": {
@@ -7738,9 +7738,9 @@
             ],
             "support": {
                 "issues": "https://github.com/SymfonyCasts/sass-bundle/issues",
-                "source": "https://github.com/SymfonyCasts/sass-bundle/tree/v0.8.3"
+                "source": "https://github.com/SymfonyCasts/sass-bundle/tree/v0.9.0"
             },
-            "time": "2025-08-26T15:45:57+00:00"
+            "time": "2025-11-29T13:44:16+00:00"
         },
         {
             "name": "twbs/bootstrap",
@@ -11718,5 +11718,5 @@
     "platform-overrides": {
         "php": "8.4.0"
     },
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
