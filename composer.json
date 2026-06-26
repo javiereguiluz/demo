@@ -34,6 +34,7 @@
         "symfony/stimulus-bundle": "^2.12",
         "symfony/string": "^8",
         "symfony/translation": "^8",
+        "symfony/tui": "^8.1",
         "symfony/twig-bundle": "^8",
         "symfony/ux-icons": "^2.20",
         "symfony/ux-live-component": "^2.6",
